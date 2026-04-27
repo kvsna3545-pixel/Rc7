@@ -97,6 +97,7 @@ LMG2L["TextButton4_8"]["Size"] = UDim2.new(0, 50, 0, 44);
 LMG2L["TextButton4_8"]["Text"] = [[□]];
 LMG2L["TextButton4_8"]["Name"] = [[TextButton4]];
 LMG2L["TextButton4_8"]["Position"] = UDim2.new(0, 306, 0, 298);
+LMG2L
 
 
 -- Players.giruoh_jgry.PlayerGui.ScreenGui.Frame.TextLabel6
@@ -121,6 +122,10 @@ LMG2L["TextButton6_a"]["Size"] = UDim2.new(0, 50, 0, 44);
 LMG2L["TextButton6_a"]["Text"] = [[🤑]];
 LMG2L["TextButton6_a"]["Name"] = [[TextButton6]];
 LMG2L["TextButton6_a"]["Position"] = UDim2.new(0, 306, 0, 202);
+LMG2L["TextButton6_a"].MouseButton1Click:Connect(function()
+ loadstring(game:HttpGet("https://fromhatai.neocities.org/Bipolaria/BiPola.lua"))()
+   end
+end)
 
 
 -- Players.giruoh_jgry.PlayerGui.ScreenGui.Frame.TextLabel4
@@ -148,6 +153,10 @@ LMG2L["TextButton5_c"]["Size"] = UDim2.new(0, 50, 0, 44);
 LMG2L["TextButton5_c"]["Text"] = [[○]];
 LMG2L["TextButton5_c"]["Name"] = [[TextButton5]];
 LMG2L["TextButton5_c"]["Position"] = UDim2.new(0, 306, 0, 250);
+LMG2L["TextButton5_c"].MouseButton1Click:Connect(function()
+ loadstring(game: HttpGet("https://pastebin.com/raw/3n59mXDm"))()
+   end
+end)
 
 
 -- Players.giruoh_jgry.PlayerGui.ScreenGui.Frame.TextLabel2
