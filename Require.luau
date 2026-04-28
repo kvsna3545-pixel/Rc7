@@ -296,7 +296,7 @@ end)
 
 -- Close button (X)
 closeBtn.MouseButton1Click:Connect(function()
-    frame.Visible = false
+    frame:Destroy()
 end)
 
 -- yeeeeeyhaaaaaaaa
