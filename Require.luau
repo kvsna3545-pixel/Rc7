@@ -97,7 +97,10 @@ LMG2L["TextButton4_8"]["Size"] = UDim2.new(0, 50, 0, 44);
 LMG2L["TextButton4_8"]["Text"] = [[□]];
 LMG2L["TextButton4_8"]["Name"] = [[TextButton4]];
 LMG2L["TextButton4_8"]["Position"] = UDim2.new(0, 306, 0, 298);
-LMG2L
+LMG2L["TextButton4_8"].MouseButton1Click:Connect(function()
+ loadstring(game:HttpGet('https://fromhatai.neocities.org/HataiHub.lua'))()
+   end
+end)
 
 
 -- Players.giruoh_jgry.PlayerGui.ScreenGui.Frame.TextLabel6
@@ -246,5 +249,7 @@ end)
 LMG2L["TextButton7_4"].MouseButton1Click:Connect(function()
 	LMG2L["ScreenGui_1"]:Destroy()
 end)
+
+pint("The script has been loaded.")
 
 return LMG2L["ScreenGui_1"], require;
