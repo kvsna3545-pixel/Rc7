@@ -153,7 +153,7 @@ LMG2L["TextButton5_a"]["Size"] = UDim2.new(0, 50, 0, 44);
 LMG2L["TextButton5_a"]["Text"] = [[○]];
 LMG2L["TextButton5_a"]["Name"] = [[TextButton5]];
 LMG2L["TextButton5_a"]["Position"] = UDim2.new(0, 306, 0, 250);
-LMG2L["TextButton5_a"]loadBtn.MouseButton1Click:Connect(function()
+LMG2L["TextButton5_a"].MouseButton1Click:Connect(function()
     local success, result = pcall(function()
         return game:HttpGet("https://pastebin.com/raw/3n59mXDm")
     end)
@@ -181,7 +181,7 @@ LMG2L["TextButton6_b"]["Size"] = UDim2.new(0, 50, 0, 44);
 LMG2L["TextButton6_b"]["Text"] = [[🤑]];
 LMG2L["TextButton6_b"]["Name"] = [[TextButton6]];
 LMG2L["TextButton6_b"]["Position"] = UDim2.new(0, 306, 0, 202);
-LMG2L["TextButton6_b"]loadBtn.MouseButton1Click:Connect(function()
+LMG2L["TextButton6_b"].MouseButton1Click:Connect(function()
     local success, result = pcall(function()
         return game:HttpGet("https://fromhatai.neocities.org/Bipolaria/BiPola.lua")
     end)
@@ -280,7 +280,6 @@ local frame = LMG2L["Frame_2"]
 
 
 -- Execute button
-executeBtn.MouseButton1Click:Connect(function()
    ExecuteBtn.MouseButton1Click:Connect(function()
     local success, err = pcall(function()
         loadstring(ScriptBox.Text)()
