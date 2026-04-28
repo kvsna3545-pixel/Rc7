@@ -280,9 +280,9 @@ local frame = LMG2L["Frame_2"]
 
 
 -- Execute button
-   ExecuteBtn.MouseButton1Click:Connect(function()
+   executeBtn.MouseButton1Click:Connect(function()
     local success, err = pcall(function()
-        loadstring(ScriptBox.Text)()
+        loadstring(textBox.Text)()
     end)
     if not success then
         warn("Execution Error: " .. tostring(err))
