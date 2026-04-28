@@ -331,7 +331,18 @@ closeBtn.MouseButton1Click:Connect(function()
     frame:Destroy()
 end)
 
-pint("--by 00script--")
+
+-- loading
+game.StarterGui:SetCore("DevConsoleVisible", true) 
+wait(0.1)
+print("Look for Roblox bypass.")
+wait(0.5)
+pint("Found it.")
+wait(0.2)
+pint("script by 00script")
+wait(1)
+game.StarterGui:SetCore("DevConsoleVisible", false)
+
 
 
 return LMG2L["bypass🤑🤑🤑🤑🤑_1"], require;
