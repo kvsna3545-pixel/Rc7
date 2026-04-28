@@ -217,39 +217,39 @@ LMG2L["TextLabel3_10"]["Position"] = UDim2.new(0, 304, 0, 18);
 -- Players.giruoh_jgry.PlayerGui.ScreenGui.Frame.UIDragDetector
 LMG2L["UIDragDetector_11"] = Instance.new("UIDragDetector", LMG2L["Frame_2"]);
 
------------------------------------------------------------
--- [ เพิ่มฟังชั่นการใช้งานตรงนี้ ] --
------------------------------------------------------------
+-- ดึง Variables หลักมาใช้งาน (ใช้ชื่อเดิมจาก Table LMG2L)
+local MainFrame = LMG2L["Frame_2"]
+local ScreenGui = LMG2L["ScreenGui_1"]
+local TextBox = LMG2L["TextBox_f"]
+local ExecuteBtn = LMG2L["TextButton_7"]
+local ClearBtn = LMG2L["TextButton2_5"]
+local CloseBtn = LMG2L["TextButton7_4"]
 
--- 1. ฟังชั่นปุ่ม Execute (รันโค้ดที่พิมพ์ในช่อง)
-LMG2L["TextButton_7"].MouseButton1Click:Connect(function()
-	local code = LMG2L["TextBox_f"].Text
-	local success, err = pcall(function()
-		loadstring(code)()
-	end)
-	
-	if not success then
-		warn("Execution Error: " .. err)
-		LMG2L["TextLabel6_9"].Text = "Error: See Console"
-		LMG2L["TextLabel6_9"].TextColor3 = Color3.fromRGB(255, 0, 0)
-	else
-		LMG2L["TextLabel6_9"].Text = "Executed Successfully!"
-		LMG2L["TextLabel6_9"].TextColor3 = Color3.fromRGB(0, 170, 0)
+-- 1. ฟังก์ชันสำหรับรันสคริปต์ (Execute)
+ExecuteBtn.MouseButton1Click:Connect(function()
+	local code = TextBox.Text
+	if code ~= "" then
+		local success, err = pcall(function()
+			loadstring(code)()
+		end)
+		
+		if not success then
+			warn("Execute Error: " .. err)
+		end
 	end
 end)
 
--- 2. ฟังชั่นปุ่ม Clear (ล้างข้อความในช่องพิมพ์)
-LMG2L["TextButton2_5"].MouseButton1Click:Connect(function()
-	LMG2L["TextBox_f"].Text = ""
-	LMG2L["TextLabel6_9"].Text = "Cleared"
-	LMG2L["TextLabel6_9"].TextColor3 = Color3.fromRGB(0, 0, 0)
+-- 2. ฟังก์ชันสำหรับล้างข้อความ (Clear)
+ClearBtn.MouseButton1Click:Connect(function()
+	TextBox.Text = ""
 end)
 
--- 3. ฟังชั่นปุ่ม X (ปิด GUI)
-LMG2L["TextButton7_4"].MouseButton1Click:Connect(function()
-	LMG2L["ScreenGui_1"]:Destroy()
+-- 3. ฟังก์ชันสำหรับปิดหน้าจอ (Close)
+CloseBtn.MouseButton1Click:Connect(function()
+	ScreenGui:Destroy()
 end)
 
-pint("The script has been loaded.")
+-- แจ้งเตือนใน Output ว่าสคริปต์พร้อมทำงาน
+print("RC7 by Team 00script Loaded!")
 
 return LMG2L["ScreenGui_1"], require;
