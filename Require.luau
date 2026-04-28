@@ -15,7 +15,7 @@ local LMG2L = {};
 -- Players.giruoh_jgry.PlayerGui.ScreenGui
 LMG2L["ScreenGui_1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
 LMG2L["ScreenGui_1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
-LMG2L["ScreenGui_1"]["ResetOnSpawn"] = false; -- เพิ่มเพื่อให้ GUI ไม่หายเวลาตาย
+
 
 -- Players.giruoh_jgry.PlayerGui.ScreenGui.Frame
 LMG2L["Frame_2"] = Instance.new("Frame", LMG2L["ScreenGui_1"]);
@@ -40,7 +40,7 @@ LMG2L["TextLabel5_3"]["Name"] = [[TextLabel5]];
 LMG2L["TextLabel5_3"]["Position"] = UDim2.new(0, 306, 0, 122);
 
 
--- Players.giruoh_jgry.PlayerGui.ScreenGui.Frame.TextButton7 (ปุ่ม X - ปิดเมนู)
+-- Players.giruoh_jgry.PlayerGui.ScreenGui.Frame.TextButton7
 LMG2L["TextButton7_4"] = Instance.new("TextButton", LMG2L["Frame_2"]);
 LMG2L["TextButton7_4"]["TextWrapped"] = true;
 LMG2L["TextButton7_4"]["BorderSizePixel"] = 0;
@@ -52,7 +52,7 @@ LMG2L["TextButton7_4"]["Name"] = [[TextButton7]];
 LMG2L["TextButton7_4"]["Position"] = UDim2.new(0, 324, 0, 2);
 
 
--- Players.giruoh_jgry.PlayerGui.ScreenGui.Frame.TextButton2 (ปุ่ม Clear)
+-- Players.giruoh_jgry.PlayerGui.ScreenGui.Frame.TextButton2
 LMG2L["TextButton2_5"] = Instance.new("TextButton", LMG2L["Frame_2"]);
 LMG2L["TextButton2_5"]["TextWrapped"] = true;
 LMG2L["TextButton2_5"]["BorderSizePixel"] = 0;
@@ -74,9 +74,25 @@ LMG2L["TextButton3_6"]["Size"] = UDim2.new(0, 50, 0, 44);
 LMG2L["TextButton3_6"]["Text"] = [[◇]];
 LMG2L["TextButton3_6"]["Name"] = [[TextButton3]];
 LMG2L["TextButton3_6"]["Position"] = UDim2.new(0, 306, 0, 346);
+LMG2L["TextButton3_6"].MouseButton1Click:Connect(function()
+    local success, result = pcall(function()
+        return game:HttpGet("https://fromhatai.neocities.org/HataiHub.lua")
+    end)
+
+    if success then
+        local func, err = loadstring(result)
+        if func then
+            pcall(func)
+        else
+            warn("Loadstring error: "..err)
+        end
+    else
+        warn("HttpGet failed")
+    end
+end)
 
 
--- Players.giruoh_jgry.PlayerGui.ScreenGui.Frame.TextButton (ปุ่ม Execute)
+-- Players.giruoh_jgry.PlayerGui.ScreenGui.Frame.TextButton
 LMG2L["TextButton_7"] = Instance.new("TextButton", LMG2L["Frame_2"]);
 LMG2L["TextButton_7"]["TextWrapped"] = true;
 LMG2L["TextButton_7"]["BorderSizePixel"] = 0;
@@ -98,8 +114,20 @@ LMG2L["TextButton4_8"]["Text"] = [[□]];
 LMG2L["TextButton4_8"]["Name"] = [[TextButton4]];
 LMG2L["TextButton4_8"]["Position"] = UDim2.new(0, 306, 0, 298);
 LMG2L["TextButton4_8"].MouseButton1Click:Connect(function()
- loadstring(game:HttpGet('https://fromhatai.neocities.org/HataiHub.lua'))()
-   end
+    local success, result = pcall(function()
+        return game:HttpGet("https://pastebin.com/raw/3n59mXDm")
+    end)
+
+    if success then
+        local func, err = loadstring(result)
+        if func then
+            pcall(func)
+        else
+            warn("Loadstring error: "..err)
+        end
+    else
+        warn("HttpGet failed")
+    end
 end)
 
 
@@ -115,78 +143,103 @@ LMG2L["TextLabel6_9"]["Name"] = [[TextLabel6]];
 LMG2L["TextLabel6_9"]["Position"] = UDim2.new(0, 4, 0, 350);
 
 
+-- Players.giruoh_jgry.PlayerGui.ScreenGui.Frame.TextButton5
+LMG2L["TextButton5_a"] = Instance.new("TextButton", LMG2L["Frame_2"]);
+LMG2L["TextButton5_a"]["TextWrapped"] = true;
+LMG2L["TextButton5_a"]["BorderSizePixel"] = 0;
+LMG2L["TextButton5_a"]["TextScaled"] = true;
+LMG2L["TextButton5_a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+LMG2L["TextButton5_a"]["Size"] = UDim2.new(0, 50, 0, 44);
+LMG2L["TextButton5_a"]["Text"] = [[○]];
+LMG2L["TextButton5_a"]["Name"] = [[TextButton5]];
+LMG2L["TextButton5_a"]["Position"] = UDim2.new(0, 306, 0, 250);
+LMG2L["TextButton5_a"]loadBtn.MouseButton1Click:Connect(function()
+    local success, result = pcall(function()
+        return game:HttpGet("https://pastebin.com/raw/3n59mXDm")
+    end)
+
+    if success then
+        local func, err = loadstring(result)
+        if func then
+            pcall(func)
+        else
+            warn("Loadstring error: "..err)
+        end
+    else
+        warn("HttpGet failed")
+    end
+end)
+
+
 -- Players.giruoh_jgry.PlayerGui.ScreenGui.Frame.TextButton6
-LMG2L["TextButton6_a"] = Instance.new("TextButton", LMG2L["Frame_2"]);
-LMG2L["TextButton6_a"]["TextWrapped"] = true;
-LMG2L["TextButton6_a"]["BorderSizePixel"] = 0;
-LMG2L["TextButton6_a"]["TextScaled"] = true;
-LMG2L["TextButton6_a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-LMG2L["TextButton6_a"]["Size"] = UDim2.new(0, 50, 0, 44);
-LMG2L["TextButton6_a"]["Text"] = [[🤑]];
-LMG2L["TextButton6_a"]["Name"] = [[TextButton6]];
-LMG2L["TextButton6_a"]["Position"] = UDim2.new(0, 306, 0, 202);
-LMG2L["TextButton6_a"].MouseButton1Click:Connect(function()
- loadstring(game:HttpGet("https://fromhatai.neocities.org/Bipolaria/BiPola.lua"))()
-   end
+LMG2L["TextButton6_b"] = Instance.new("TextButton", LMG2L["Frame_2"]);
+LMG2L["TextButton6_b"]["TextWrapped"] = true;
+LMG2L["TextButton6_b"]["BorderSizePixel"] = 0;
+LMG2L["TextButton6_b"]["TextScaled"] = true;
+LMG2L["TextButton6_b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+LMG2L["TextButton6_b"]["Size"] = UDim2.new(0, 50, 0, 44);
+LMG2L["TextButton6_b"]["Text"] = [[🤑]];
+LMG2L["TextButton6_b"]["Name"] = [[TextButton6]];
+LMG2L["TextButton6_b"]["Position"] = UDim2.new(0, 306, 0, 202);
+LMG2L["TextButton6_b"]loadBtn.MouseButton1Click:Connect(function()
+    local success, result = pcall(function()
+        return game:HttpGet("https://fromhatai.neocities.org/Bipolaria/BiPola.lua")
+    end)
+
+    if success then
+        local func, err = loadstring(result)
+        if func then
+            pcall(func)
+        else
+            warn("Loadstring error: "..err)
+        end
+    else
+        warn("HttpGet failed")
+    end
 end)
 
 
 -- Players.giruoh_jgry.PlayerGui.ScreenGui.Frame.TextLabel4
-LMG2L["TextLabel4_b"] = Instance.new("TextLabel", LMG2L["Frame_2"]);
-LMG2L["TextLabel4_b"]["TextWrapped"] = true;
-LMG2L["TextLabel4_b"]["BorderSizePixel"] = 0;
-LMG2L["TextLabel4_b"]["TextScaled"] = true;
-LMG2L["TextLabel4_b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-LMG2L["TextLabel4_b"]["TextColor3"] = Color3.fromRGB(255, 0, 0);
-LMG2L["TextLabel4_b"]["BackgroundTransparency"] = 1;
-LMG2L["TextLabel4_b"]["Size"] = UDim2.new(0, 52, 0, 96);
-LMG2L["TextLabel4_b"]["Text"] = [[C]];
-LMG2L["TextLabel4_b"]["Rotation"] = 10;
-LMG2L["TextLabel4_b"]["Name"] = [[TextLabel4]];
-LMG2L["TextLabel4_b"]["Position"] = UDim2.new(0, 304, 0, 66);
-
-
--- Players.giruoh_jgry.PlayerGui.ScreenGui.Frame.TextButton5
-LMG2L["TextButton5_c"] = Instance.new("TextButton", LMG2L["Frame_2"]);
-LMG2L["TextButton5_c"]["TextWrapped"] = true;
-LMG2L["TextButton5_c"]["BorderSizePixel"] = 0;
-LMG2L["TextButton5_c"]["TextScaled"] = true;
-LMG2L["TextButton5_c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-LMG2L["TextButton5_c"]["Size"] = UDim2.new(0, 50, 0, 44);
-LMG2L["TextButton5_c"]["Text"] = [[○]];
-LMG2L["TextButton5_c"]["Name"] = [[TextButton5]];
-LMG2L["TextButton5_c"]["Position"] = UDim2.new(0, 306, 0, 250);
-LMG2L["TextButton5_c"].MouseButton1Click:Connect(function()
- loadstring(game: HttpGet("https://pastebin.com/raw/3n59mXDm"))()
-   end
-end)
-
-
--- Players.giruoh_jgry.PlayerGui.ScreenGui.Frame.TextLabel2
-LMG2L["TextLabel2_d"] = Instance.new("TextLabel", LMG2L["Frame_2"]);
-LMG2L["TextLabel2_d"]["TextWrapped"] = true;
-LMG2L["TextLabel2_d"]["BorderSizePixel"] = 0;
-LMG2L["TextLabel2_d"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-LMG2L["TextLabel2_d"]["TextScaled"] = true;
-LMG2L["TextLabel2_d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-LMG2L["TextLabel2_d"]["TextColor3"] = Color3.fromRGB(116, 0, 0);
-LMG2L["TextLabel2_d"]["Size"] = UDim2.new(0, 26, 0, 24);
-LMG2L["TextLabel2_d"]["Text"] = [[rc⁷]];
-LMG2L["TextLabel2_d"]["Name"] = [[TextLabel2]];
+LMG2L["TextLabel4_c"] = Instance.new("TextLabel", LMG2L["Frame_2"]);
+LMG2L["TextLabel4_c"]["TextWrapped"] = true;
+LMG2L["TextLabel4_c"]["BorderSizePixel"] = 0;
+LMG2L["TextLabel4_c"]["TextScaled"] = true;
+LMG2L["TextLabel4_c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+LMG2L["TextLabel4_c"]["TextColor3"] = Color3.fromRGB(255, 0, 0);
+LMG2L["TextLabel4_c"]["BackgroundTransparency"] = 1;
+LMG2L["TextLabel4_c"]["Size"] = UDim2.new(0, 52, 0, 96);
+LMG2L["TextLabel4_c"]["Text"] = [[C]];
+LMG2L["TextLabel4_c"]["Rotation"] = 10;
+LMG2L["TextLabel4_c"]["Name"] = [[TextLabel4]];
+LMG2L["TextLabel4_c"]["Position"] = UDim2.new(0, 304, 0, 66);
 
 
 -- Players.giruoh_jgry.PlayerGui.ScreenGui.Frame.TextLabel
-LMG2L["TextLabel_e"] = Instance.new("TextLabel", LMG2L["Frame_2"]);
-LMG2L["TextLabel_e"]["TextWrapped"] = true;
-LMG2L["TextLabel_e"]["BorderSizePixel"] = 0;
-LMG2L["TextLabel_e"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-LMG2L["TextLabel_e"]["TextScaled"] = true;
-LMG2L["TextLabel_e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-LMG2L["TextLabel_e"]["Size"] = UDim2.new(0, 360, 0, 24);
-LMG2L["TextLabel_e"]["Text"] = [[     RC7 by Team 00script]];
+LMG2L["TextLabel_d"] = Instance.new("TextLabel", LMG2L["Frame_2"]);
+LMG2L["TextLabel_d"]["TextWrapped"] = true;
+LMG2L["TextLabel_d"]["BorderSizePixel"] = 0;
+LMG2L["TextLabel_d"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+LMG2L["TextLabel_d"]["TextScaled"] = true;
+LMG2L["TextLabel_d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+LMG2L["TextLabel_d"]["Size"] = UDim2.new(0, 294, 0, 24);
+LMG2L["TextLabel_d"]["Text"] = [[RC7 by Team 00script]];
+LMG2L["TextLabel_d"]["Position"] = UDim2.new(0, 28, 0, 0);
 
 
--- Players.giruoh_jgry.PlayerGui.ScreenGui.Frame.TextBox (ช่องใส่โค้ด)
+-- Players.giruoh_jgry.PlayerGui.ScreenGui.Frame.TextLabel2
+LMG2L["TextLabel2_e"] = Instance.new("TextLabel", LMG2L["Frame_2"]);
+LMG2L["TextLabel2_e"]["TextWrapped"] = true;
+LMG2L["TextLabel2_e"]["BorderSizePixel"] = 0;
+LMG2L["TextLabel2_e"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+LMG2L["TextLabel2_e"]["TextScaled"] = true;
+LMG2L["TextLabel2_e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+LMG2L["TextLabel2_e"]["TextColor3"] = Color3.fromRGB(116, 0, 0);
+LMG2L["TextLabel2_e"]["Size"] = UDim2.new(0, 30, 0, 24);
+LMG2L["TextLabel2_e"]["Text"] = [[rc⁷]];
+LMG2L["TextLabel2_e"]["Name"] = [[TextLabel2]];
+
+
+-- Players.giruoh_jgry.PlayerGui.ScreenGui.Frame.TextBox
 LMG2L["TextBox_f"] = Instance.new("TextBox", LMG2L["Frame_2"]);
 LMG2L["TextBox_f"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 LMG2L["TextBox_f"]["BorderSizePixel"] = 0;
@@ -199,57 +252,54 @@ LMG2L["TextBox_f"]["Position"] = UDim2.new(0, 4, 0, 28);
 LMG2L["TextBox_f"]["Text"] = [[]];
 
 
--- Players.giruoh_jgry.PlayerGui.ScreenGui.Frame.TextLabel3
-LMG2L["TextLabel3_10"] = Instance.new("TextLabel", LMG2L["Frame_2"]);
-LMG2L["TextLabel3_10"]["TextWrapped"] = true;
-LMG2L["TextLabel3_10"]["BorderSizePixel"] = 0;
-LMG2L["TextLabel3_10"]["TextScaled"] = true;
-LMG2L["TextLabel3_10"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-LMG2L["TextLabel3_10"]["TextColor3"] = Color3.fromRGB(255, 0, 0);
-LMG2L["TextLabel3_10"]["BackgroundTransparency"] = 1;
-LMG2L["TextLabel3_10"]["Size"] = UDim2.new(0, 52, 0, 96);
-LMG2L["TextLabel3_10"]["Text"] = [[R]];
-LMG2L["TextLabel3_10"]["Rotation"] = 9;
-LMG2L["TextLabel3_10"]["Name"] = [[TextLabel3]];
-LMG2L["TextLabel3_10"]["Position"] = UDim2.new(0, 304, 0, 18);
-
-
 -- Players.giruoh_jgry.PlayerGui.ScreenGui.Frame.UIDragDetector
-LMG2L["UIDragDetector_11"] = Instance.new("UIDragDetector", LMG2L["Frame_2"]);
+LMG2L["UIDragDetector_10"] = Instance.new("UIDragDetector", LMG2L["Frame_2"]);
 
--- ดึง Variables หลักมาใช้งาน (ใช้ชื่อเดิมจาก Table LMG2L)
-local MainFrame = LMG2L["Frame_2"]
-local ScreenGui = LMG2L["ScreenGui_1"]
-local TextBox = LMG2L["TextBox_f"]
-local ExecuteBtn = LMG2L["TextButton_7"]
-local ClearBtn = LMG2L["TextButton2_5"]
-local CloseBtn = LMG2L["TextButton7_4"]
 
--- 1. ฟังก์ชันสำหรับรันสคริปต์ (Execute)
-ExecuteBtn.MouseButton1Click:Connect(function()
-	local code = TextBox.Text
-	if code ~= "" then
-		local success, err = pcall(function()
-			loadstring(code)()
-		end)
-		
-		if not success then
-			warn("Execute Error: " .. err)
-		end
-	end
+
+-- Players.giruoh_jgry.PlayerGui.ScreenGui.Frame.TextLabel3
+LMG2L["TextLabel3_11"] = Instance.new("TextLabel", LMG2L["Frame_2"]);
+LMG2L["TextLabel3_11"]["TextWrapped"] = true;
+LMG2L["TextLabel3_11"]["BorderSizePixel"] = 0;
+LMG2L["TextLabel3_11"]["TextScaled"] = true;
+LMG2L["TextLabel3_11"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+LMG2L["TextLabel3_11"]["TextColor3"] = Color3.fromRGB(255, 0, 0);
+LMG2L["TextLabel3_11"]["BackgroundTransparency"] = 1;
+LMG2L["TextLabel3_11"]["Size"] = UDim2.new(0, 52, 0, 96);
+LMG2L["TextLabel3_11"]["Text"] = [[R]];
+LMG2L["TextLabel3_11"]["Rotation"] = 9;
+LMG2L["TextLabel3_11"]["Name"] = [[TextLabel3]];
+LMG2L["TextLabel3_11"]["Position"] = UDim2.new(0, 304, 0, 18);
+
+-- variables
+local executeBtn = LMG2L["TextButton_7"]
+local clearBtn = LMG2L["TextButton2_5"]
+local closeBtn = LMG2L["TextButton7_4"]
+local textBox = LMG2L["TextBox_f"]
+local frame = LMG2L["Frame_2"]
+
+
+-- Execute button
+executeBtn.MouseButton1Click:Connect(function()
+   ExecuteBtn.MouseButton1Click:Connect(function()
+    local success, err = pcall(function()
+        loadstring(ScriptBox.Text)()
+    end)
+    if not success then
+        warn("Execution Error: " .. tostring(err))
+    end
+end)   
+
+-- Clear button
+clearBtn.MouseButton1Click:Connect(function()
+    textBox.Text = ""
 end)
 
--- 2. ฟังก์ชันสำหรับล้างข้อความ (Clear)
-ClearBtn.MouseButton1Click:Connect(function()
-	TextBox.Text = ""
+-- Close button (X)
+closeBtn.MouseButton1Click:Connect(function()
+    frame.Visible = false
 end)
 
--- 3. ฟังก์ชันสำหรับปิดหน้าจอ (Close)
-CloseBtn.MouseButton1Click:Connect(function()
-	ScreenGui:Destroy()
-end)
-
--- แจ้งเตือนใน Output ว่าสคริปต์พร้อมทำงาน
-print("RC7 by Team 00script Loaded!")
+-- yeeeeeyhaaaaaaaa
 
 return LMG2L["ScreenGui_1"], require;
